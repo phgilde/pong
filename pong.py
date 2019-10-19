@@ -1,11 +1,12 @@
 import pygame
 import numpy as np
 import sys
+from win32api import GetSystemMetrics
 
 successes, failures = pygame.init()
 print("{0} successes and {1} failures".format(successes, failures))
 
-WIDTH, HEIGHT = 1920, 1080
+WIDTH, HEIGHT = GetSystemMetrics(0), GetSystemMetrics(1)
 FPS = 60  # Frames per second.
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
